@@ -22,7 +22,11 @@ except ModuleNotFoundError:
     exit()
 
 
+current_path = os.path.abspath(__file__)
+current_head = os.path.split(current_path)
+main_path = current_head[0]
 
+env_path = os.path.join(main_path, ".env")
 
 
 def in_idle():
@@ -68,7 +72,7 @@ def get_envInfo():
     key = ["", ""]
     value = ["", ""]
     s = 0
-    fr = open(".env", "r")
+    fr = open(env_path, "r")
     for line in fr.readlines():
         key[s], value[s] = line.split("=")
         key[s] = key[s].strip()
@@ -97,7 +101,7 @@ def create_token(chan_id, token):
             except ValueError:
                 print(bright_red +  "Only Integer values", end="\n\n")
             else:
-                f = open(".env", "w")
+                f = open(env_path, "w")
                 f.write("DISCORD_TOKEN="+token+"\n")
                 f.write("CHANNEL_ID="+str(chan_id)+"\n")
                 f.close()
@@ -116,7 +120,7 @@ def create_token(chan_id, token):
             except ValueError:
                 print(bright_red + "Only Integer values", end="\n\n")
             else:
-                f = open(".env", "w")
+                f = open(env_path, "w")
                 f.write("DISCORD_TOKEN="+value[0]+"\n")
                 f.write("CHANNEL_ID="+str(chan_id)+"\n")
                 f.close()
@@ -130,7 +134,7 @@ def create_token(chan_id, token):
         except KeyboardInterrupt:
             exit()
         else:
-            f = open(".env", "w")
+            f = open(env_path, "w")
             f.write("DISCORD_TOKEN="+token+"\n")
             f.write("CHANNEL_ID="+value[1]+"\n")
             f.close()
@@ -138,14 +142,14 @@ def create_token(chan_id, token):
 
 def delete_token():
     key, value = get_envInfo()
-    f = open(".env", "w")
+    f = open(env_path, "w")
     f.write("DISCORD_TOKEN=\n")
     f.write("CHANNEL_ID="+value[1]+"\n")
     f.close()
 
 def delete_channel():
     key, value = get_envInfo()
-    f = open(".env", "w")
+    f = open(env_path, "w")
     f.write("DISCORD_TOKEN="+value[0]+"\n")
     f.write("CHANNEL_ID=\n")
     f.close()
@@ -161,6 +165,11 @@ def chat_menu_help():
 
 
 clear()
+
+
+
+
+
 
 print(" ", end="\n")
 print(bright_green + "A Simple                                   ")
@@ -178,13 +187,15 @@ exitMsg = bright_red + "Press Ctrl + C to exit..."
 
 k1 = 1
 while (k1 < 2):
-    if (os.path.exists(".env")):
+    if (os.path.isfile(env_path)):
         load_dotenv()
         DISCORD_TOKEN = os.getenv("DISCORD_TOKEN").strip()
         CHANNEL_ID = os.getenv("CHANNEL_ID").strip()
         k1 += 2
     else:
-        f = open(".env", "w")
+        
+        
+        f = open(env_path, "w")
         f.write("DISCORD_TOKEN=\n")
         f.write("CHANNEL_ID=\n")
         f.close()
@@ -197,7 +208,8 @@ if (CHANNEL_ID == "" or DISCORD_TOKEN == ""):
     print(bright_green + "The bot token and channel ID have been successfully set")
 else:
     print(bright_blue +"Default bot token and channel ID are already set")
-    CHANNEL_ID = int(CHANNEL_ID)
+
+CHANNEL_ID = int(CHANNEL_ID)
 
     
 print( "To add new default bot token and channel Id,")
@@ -262,7 +274,7 @@ async def on_ready():
                         except AttributeError:
                             print(" ", end="\n")
                             print(bright_red + "An Error has occured!", end="\n\n")
-                            print(Fore.BLACK + Style.BRIGHT + white_bg + "Possible Issues: ", end="\n\n")
+                            print(Fore.BLACK  + white_bg + "Possible Issues: ", end="\n\n")
                             print(bright_red + "1. Channel ID is Invalid")
                             print(bright_red + "2. Access restriction issues (Mainly for unix-like systems; eg:linux/Mac)" )
                             print(bright_red + "3. The .env file got tampered by someone")
@@ -270,7 +282,7 @@ async def on_ready():
                             print(bright_blue + "Identifying and fixing issues....", end="\n\n")
                             dots="."
                             for n2 in range(1, 7):
-                                print('\r', bright_blue + white_bg + "Taking actions"+dots, end=" ", flush=True)
+                                print('\r', bright_blue +  "Taking actions"+dots, end=" ", flush=True)
                                 dots+="."
                                 sleep(1)
                             delete_channel()
@@ -373,7 +385,7 @@ except discord.errors.LoginFailure:
     #login failure message
     print(" ", end="\n")
     print(bright_red + "An Error has occured!", end="\n\n")
-    print(Fore.BLACK + Style.BRIGHT + white_bg + "Possible Issues: ", end="\n\n")
+    print(Fore.BLACK  + white_bg + "Possible Issues: ", end="\n\n")
     print(bright_red + "1. Bot token is Invalid")
     print(bright_red + "2. Access restriction issues (Mainly for unix-like systems; eg:linux/Mac)" )
     print(bright_red + "3. The .env file got tampered by someone")
@@ -381,7 +393,7 @@ except discord.errors.LoginFailure:
     print(bright_red + "Identifying and fixing issues....", end="\n\n")
     dots="."
     for n1 in range(1, 7):
-        print('\r', bright_blue + white_bg + "Taking actions"+dots, end=" ", flush=True)
+        print('\r', bright_blue +  "Taking actions"+dots, end=" ", flush=True)
         dots+="."
         sleep(1)
     delete_token()
@@ -397,7 +409,7 @@ except:
     #any other issue message(mostly network connection based issues)
     print(" ")
     print(bright_red + "An Error has occured!", end="\n\n")
-    print(Fore.BLACK + Style.BRIGHT + white_bg + "Possible Issues: ", end="\n\n")
+    print(Fore.BLACK  + white_bg + "Possible Issues: ", end="\n\n")
     print(bright_red + "1. No/slow network connection")
     print(bright_red + "2. Required packages are not installed")
     print(bright_red + "3. Problems related to outdated software")

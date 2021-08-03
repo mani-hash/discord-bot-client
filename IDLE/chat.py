@@ -19,6 +19,12 @@ except ModuleNotFoundError:
     sleep(2)
     exit()
 
+current_path = os.path.abspath(__file__)
+current_head = os.path.split(current_path)
+main_path = current_head[0]
+
+env_path = os.path.join(main_path, ".env")
+
 def clear():
     # for windows
     if os.name == 'nt':
@@ -79,7 +85,7 @@ def get_envInfo():
     key = ["", ""]
     value = ["", ""]
     s = 0
-    fr = open(".env", "r")
+    fr = open(env_path, "r")
     for line in fr.readlines():
         key[s], value[s] = line.split("=")
         key[s] = key[s].strip()
@@ -108,7 +114,7 @@ def create_token(chan_id, token):
             except ValueError:
                 print("Only Integer values", end="\n\n")
             else:
-                f = open(".env", "w")
+                f = open(env_path, "w")
                 f.write("DISCORD_TOKEN="+token+"\n")
                 f.write("CHANNEL_ID="+str(chan_id)+"\n")
                 f.close()
@@ -127,7 +133,7 @@ def create_token(chan_id, token):
             except ValueError:
                 print("Only Integer values", end="\n\n")
             else:
-                f = open(".env", "w")
+                f = open(env_path, "w")
                 f.write("DISCORD_TOKEN="+value[0]+"\n")
                 f.write("CHANNEL_ID="+str(chan_id)+"\n")
                 f.close()
@@ -141,7 +147,7 @@ def create_token(chan_id, token):
         except KeyboardInterrupt:
             exit()
         else:
-            f = open(".env", "w")
+            f = open(env_path, "w")
             f.write("DISCORD_TOKEN="+token+"\n")
             f.write("CHANNEL_ID="+value[1]+"\n")
             f.close()
@@ -149,14 +155,14 @@ def create_token(chan_id, token):
 
 def delete_token():
     key, value = get_envInfo()
-    f = open(".env", "w")
+    f = open(env_path, "w")
     f.write("DISCORD_TOKEN=\n")
     f.write("CHANNEL_ID="+value[1]+"\n")
     f.close()
 
 def delete_channel():
     key, value = get_envInfo()
-    f = open(".env", "w")
+    f = open(env_path, "w")
     f.write("DISCORD_TOKEN="+value[0]+"\n")
     f.write("CHANNEL_ID=\n")
     f.close()
@@ -188,13 +194,13 @@ exitMsg = "Press Ctrl + C to exit..."
 
 k1 = 1
 while (k1 < 2):
-    if (os.path.exists(".env")):
+    if (os.path.isfile(env_path)):
         load_dotenv()
         DISCORD_TOKEN = os.getenv("DISCORD_TOKEN").strip()
         CHANNEL_ID = os.getenv("CHANNEL_ID").strip()
         k1 += 2
     else:
-        f = open(".env", "w")
+        f = open(env_path, "w")
         f.write("DISCORD_TOKEN=\n")
         f.write("CHANNEL_ID=\n")
         f.close()
@@ -203,11 +209,13 @@ while (k1 < 2):
 
 if (CHANNEL_ID == "" or DISCORD_TOKEN == ""):
     DISCORD_TOKEN, CHANNEL_ID = create_token(CHANNEL_ID, DISCORD_TOKEN)
+    
     print(" ", end="\n")
     print("The bot token and channel ID have been successfully set")
 else:
     print("Default bot token and channel ID are already set")
-    CHANNEL_ID = int(CHANNEL_ID)
+
+CHANNEL_ID = int(CHANNEL_ID)
 
     
 print("To add new default bot token and channel Id,")
