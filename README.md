@@ -17,9 +17,7 @@
 
 ## Requirements
 
-* Python (v 3.7.x and above) 
- &nbsp; 
- (*Note: The program hasn't been tested below python v 3.7.x*)
+* Python (v 3.7.x and above) \[**Note: The program hasn't been tested below python v 3.7.x**\]
 * Shell/terminal (Much prefered over IDLE)
     (*Note: The program won't work as expected on IDLE.* 
     *For IDLE, Run the script inside "IDLE" folder*
