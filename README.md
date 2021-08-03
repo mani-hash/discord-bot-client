@@ -9,7 +9,7 @@
 * [Requirements](#requirements)
 * [How to install modules](#how-to-install-modules)
    * [For Windows:](#for-windows)
-   * [For Linux/Mac:](#for-linux-mac)
+   * [For Linux/Mac:](#for-linux--mac)
 * [How to run the program](#how-to-run-the-program)
 * [About this Program](#about-this-program)
 * [How to reset default bot token and channel ID](#how-to-reset-default-bot-token-and-channel-id)
@@ -41,7 +41,7 @@
    * `pip3 install -r requirements.txt` 
    * `pip install -r requirements.txt`
 
-#### For Linux/Mac:
+#### For Linux / Mac:
 
 * Navigate to the directory of the python file(`shell/` or `IDLE/`) in terminal
 * Run either one of the following commands:
