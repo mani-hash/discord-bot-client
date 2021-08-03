@@ -4,7 +4,7 @@
 **Programming language used: Python**
 **Tested on: Debian (linux)**
 
-### Table of Contents
+## Table of Contents
 
 * [Requirements](#requirements)
 * [How to install modules](#how-to-install-modules)
