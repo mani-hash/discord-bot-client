@@ -1,7 +1,9 @@
 # A simple Discord Bot Client
   
 *Created by: Mani*
+
 **Programming language used: Python**
+
 **Tested on: Debian (linux)**
 
 ## Table of Contents
@@ -160,6 +162,13 @@ That will copy a URL which can be used to add the bot to a server.
     ![user settings](images/user_settings.png)
    * In the left sidebar, click on ‘Advanced’ > Click on the ‘Developer Mode’ toggle to turn it on
     ![developer mode settings](images/developer_mode.png)
-*  
+* To find the Channel ID, press and hold on the channel name and select ‘Copy ID’.
+![channel ID](images/channel_id.png) 
 
 ## Possible errors and issues related to program
+
+* The program doesn't run as expected in the IDLE (Try running it in terminal, if so use the [chat.py](shell/chat.py) in the `shell` folder)
+* Connection issues while the program is running, might throw unexpected errors
+* Editing the .env file might throw unexpected errors (If so, delete the .env file and re run the program)
+* Program hasn't been tested on windows or mac, however there is no gurantee it will work as expected on **windows**!
+
