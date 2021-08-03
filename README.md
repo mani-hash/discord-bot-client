@@ -19,9 +19,9 @@
 
 * Python (v 3.7.x and above) \[**Note: The program hasn't been tested below python v 3.7.x**\]
 * Shell/terminal (Much prefered over IDLE)
-    (*Note: The program won't work as expected on IDLE.* 
-    *For IDLE, Run the script inside "IDLE" folder*
-    *For Shell/terminal, Run the script inside "shell" folder*)
+    (**Note: The program won't work as expected on IDLE.**)
+    * For IDLE: run the script(chat.py) present in the "IDLE" folder
+    * For Command Line(Terminal/Powershell/cmd): run the script(chat.py in the "shell" folder
 * Modules:
    * colorama==0.4.4  (*Not Required for script inside "IDLE" folder*)
    * discord.py==1.7.3
