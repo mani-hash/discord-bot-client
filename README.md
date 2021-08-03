@@ -8,6 +8,8 @@
 
 * [Requirements](#requirements)
 * [How to install modules](#how-to-install-modules)
+   * [For Windows:](#for-windows)
+   * [For Linux/Mac:](#for-linux-mac)
 * [How to run the program](#how-to-run-the-program)
 * [About this Program](#about-this-program)
 * [How to reset default bot token and channel ID](#how-to-reset-default-bot-token-and-channel-id)
@@ -21,7 +23,7 @@
 * Shell/terminal (Much prefered over IDLE)
     (**Note: The program won't work as expected on IDLE.**)
     * For IDLE: run the script(chat.py) present in the "IDLE" folder
-    * For Command Line(Terminal/Powershell/cmd): run the script(chat.py in the "shell" folder
+    * For Command Line(Terminal/Powershell/cmd): run the script(chat.py) in the "shell" folder
 * Modules:
    * colorama==0.4.4  (*Not Required for script inside "IDLE" folder*)
    * discord.py==1.7.3
@@ -33,6 +35,18 @@
 
 ## How to install modules
 
+#### For Windows:
+* Navigate to the directory of the python file(`shell\` or `IDLE\`) in cmd/powershell
+* Run either one of the following commands:
+   * `pip3 install -r requirements.txt` 
+   * `pip install -r requirements.txt`
+
+#### For Linux/Mac:
+
+* Navigate to the directory of the python file(`shell/` or `IDLE/`) in terminal
+* Run either one of the following commands:
+   * `pip3 install -r requirements.txt` 
+   * `pip install -r requirements.txt`
 
 ## How to run the program
 
