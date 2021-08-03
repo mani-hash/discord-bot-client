@@ -4,7 +4,7 @@
 **Programming language used: Python**
 **Tested on: Debian (linux)**
 
-#### Table of Contents
+### Table of Contents
 
 * [Requirements](#requirements)
 * [How to install modules](#how-to-install-modules)
@@ -15,7 +15,7 @@
 * [Possible errors and issues related to program](#possible-errors-and-issues-related-to-program)
 
 
-#### Requirements
+### Requirements
 
 * Python (v 3.7.x and above) 
     (*Note: The program hasn't been tested below python v 3.7.x*)
@@ -32,12 +32,12 @@
 * Discord bot token
 * A channel ID (**The discord bot should be able to interact in the channel!**)
 
-#### How to install modules
+### How to install modules
 
 
-#### How to run the program
+### How to run the program
 
-#### About this Program
+### About this Program
 
 This python program allows you to send messages via your bot to a channel.
 
@@ -50,7 +50,9 @@ Also **note that, the bot must be present in the guild/server of the given chann
 
 The interpreter will act as your message console.
 
-#### How to reset default bot token and channel ID
+### How to reset default bot token and channel ID
+
+### How to create a bot and get a bot token
 
 
-#### Possible errors and issues related to program
+### Possible errors and issues related to program
