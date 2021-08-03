@@ -7,15 +7,15 @@
 ###Table of Contents
 
 * [Requirements](#requirements)
-* [How to install modules](#-how-to-install-modules)
-* [How to run the program](#-how-to-run-the-program)
-* [About this Program](#-about-this-program)
-* [How to reset default bot token and channel ID](#-how-to-reset-default-bot-token-and-channel-id)
+* [How to install modules](#how-to-install-modules)
+* [How to run the program](#how-to-run-the-program)
+* [About this Program](#about-this-program)
+* [How to reset default bot token and channel ID](#how-to-reset-default-bot-token-and-channel-id)
 * [How to create a bot and get a bot token]()
-* [Possible errors and issues related to program](#-possible-errors-and-issues-related-to-program)
+* [Possible errors and issues related to program](#possible-errors-and-issues-related-to-program)
 
 
-####Requirements:
+####Requirements
 
 * Python (v 3.7.x and above) 
     (*Note: The program hasn't been tested below python v 3.7.x*)
