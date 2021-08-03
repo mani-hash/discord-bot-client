@@ -99,7 +99,7 @@ The interpreter will act as your message console.
 * Make sure you’re logged on to the [Discord website](https://discord.com/)
 * Navigate to the [application page](https://discord.com/developers/applications)
 * Click on the “New Application” button.
- ![New application button](images/new_application.png)
+ ![New application button](images/new_app_btn.png)
 * Give the application a name and click “Create”.
 ![Create application menu](images/create_application.png)
 
