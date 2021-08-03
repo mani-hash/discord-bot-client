@@ -9,8 +9,11 @@
 * [Requirements](#requirements)
 * [How to install modules](#how-to-install-modules)
    * [For Windows:](#for-windows)
-   * [For Linux/Mac:](#for-linux--mac)
+   * [For Linux/Mac:](#for-linuxmac)
 * [How to run the program](#how-to-run-the-program)
+   * [For Windows (CLI):](#for-windows-cli)
+   * [For Linux/Mac (CLI):](#for-linuxmac-cli)
+   * [For IDLE:](#for-idle)
 * [About this Program](#about-this-program)
 * [How to reset default bot token and channel ID](#how-to-reset-default-bot-token-and-channel-id)
 * [How to create a bot and get a bot token](#how-to-create-a-bot-and-get-a-bot-token)
@@ -41,7 +44,7 @@
    * `pip3 install -r requirements.txt` 
    * `pip install -r requirements.txt`
 
-#### For Linux / Mac:
+#### For Linux/Mac:
 
 * Navigate to the directory of the python file(`shell/` or `IDLE/`) in terminal
 * Run either one of the following commands:
@@ -50,9 +53,35 @@
 
 ## How to run the program
 
+#### For Windows (CLI):
+
+* Navigate to the `shell\` directory in cmd/powershell
+* Run either one of the following commands:
+   * `py chat.py` or `python3 chat.py`
+
+#### For Linux/Mac (CLI):
+
+* Navigate to the `shell/` directory in terminal
+* Run the following command:
+   * `python3 chat.py`
+
+#### For IDLE:
+
+* Navigate to the `IDLE` directory in any file manager/explorer
+* Right click and select open it in IDLE
+* Press F5 or choose Run Tab > Run Module 
+
 ## About this Program
 
 This python program allows you to send messages via your bot to a channel.
+
+There are 2 scripts:
+   * chat.py (in `shell` folder)
+   * chat.py (in `IDLE` folder)
+
+For command line (if you are running the file in terminal/cmd/powershell), run the file present in `shell` folder and
+for IDLE, run the file present in `IDLE` folder
+
 
 A bot token is required to be able to send messages. The program accepts only one bot token at a time. 
 
@@ -67,5 +96,11 @@ The interpreter will act as your message console.
 
 ## How to create a bot and get a bot token
 
+* Make sure you’re logged on to the [Discord website](https://discord.com/)
+* Navigate to the [application page](https://discord.com/developers/applications)
+* Click on the “New Application” button.
+ ![New application button](images/new_application.png)
+* Give the application a name and click “Create”.
+![Create application menu](images/create_application.png)
 
 ## Possible errors and issues related to program
