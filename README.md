@@ -11,10 +11,10 @@
 * [Requirements](#requirements)
 * [How to install modules](#how-to-install-modules)
    * [For Windows:](#for-windows)
-   * [For Linux/Mac:](#for-linuxmac)
+   * [For Linux / Mac:](#for-linux--mac)
 * [How to run the program](#how-to-run-the-program)
    * [For Windows (CLI):](#for-windows-cli)
-   * [For Linux/Mac (CLI):](#for-linuxmac-cli)
+   * [For Linux / Mac (CLI):](#for-linux--mac-cli)
    * [For IDLE:](#for-idle)
 * [About this Program](#about-this-program)
 * [How to reset default bot token and channel ID](#how-to-reset-default-bot-token-and-channel-id)
@@ -29,18 +29,18 @@
 ## Requirements
 
 * Python (v 3.7.x and above) \[**Note: The program hasn't been tested below python v 3.7.x**\]
-* Shell/terminal (Much prefered over IDLE)
+* Shell / terminal (Much prefered over IDLE)
     (**Note: The program won't work as expected on IDLE.**)
     * For IDLE: run the file ([chat.py](IDLE/chat.py)) present in the "IDLE" folder
     * For Command Line(Terminal/Powershell/cmd): run the file ([chat.py](shell/chat.py)) in the "shell" folder
 * Modules:
-   * colorama==0.4.4  (*Not Required for script inside "IDLE" folder*)
+   * colorama==0.4.4  (**Not Required for script inside "IDLE" folder**)
    * discord.py==1.7.3
    * discord==1.7.3
    * python-dotenv==0.19.0
 * Stable internet connection
 * Discord bot token
-* A channel ID (**The discord bot should be able to interact in the channel!**)
+* A channel ID (**The discord bot must be able to interact in the given channel ID!**)
 
 ## How to install modules
 
@@ -50,7 +50,7 @@
    * `pip3 install -r requirements.txt` 
    * `pip install -r requirements.txt`
 
-#### For Linux/Mac:
+#### For Linux / Mac:
 
 * Navigate to the directory of the python file(`shell/` or `IDLE/`) in terminal
 * Run either one of the following commands:
@@ -65,7 +65,7 @@
 * Run either one of the following commands:
    * `py chat.py` or `python3 chat.py`
 
-#### For Linux/Mac (CLI):
+#### For Linux / Mac (CLI):
 
 * Navigate to the `shell/` directory in terminal
 * Run the following command:
@@ -96,15 +96,16 @@ The program accepts one default bot token and also one temporary bot token that 
 The default channel ID and bot token will be saved in the .env file
 
 While in the "main option console", you can enter either of the below:
-   * Enter 1 to send messages in the default channel
-   * Enter 2 to chat in a different channel (You need to provide the channel ID for this)
-   * Enter 3 to exit program
+   * Type 1 and press enter to send messages in the default channel
+   * Type 2 and press enter to chat in a different channel (You need to provide the channel ID for this)
+   * Type 3 and press enter to exit program
 
 While in the "message console", the below will give respective responses:
-   * Type /help and enter to display help message
-   * Type /prev and enter to go back to previous menu
-   * Type /clean to clean the terminal (this won't work in IDLE)
-   * Type /quit to exit program
+   * Type /help and press enter to display help message
+   * Type /prev and press enter to go back to previous menu
+   * Type /clean and press enter to clean the terminal (this won't work in IDLE)
+   * Type /quit and press enter to exit program
+   * Type any other text / characters / symbols / number , etc to send it as a message to the channel
 
 
 Also **note that, the bot must be present in the guild/server of the given channel ID and the bot must be able to interact in the given channel ID**
@@ -162,7 +163,7 @@ That will copy a URL which can be used to add the bot to a server.
     ![user settings](images/user_settings.png)
    * In the left sidebar, click on ‘Advanced’ > Click on the ‘Developer Mode’ toggle to turn it on
     ![developer mode settings](images/developer_mode.png)
-* To find the Channel ID, press and hold on the channel name and select ‘Copy ID’.
+* To find the Channel ID, right click on the channel name and select ‘Copy ID’.
 ![channel ID](images/channel_id.png) 
 
 ## Possible errors and issues related to program
