@@ -1,4 +1,4 @@
-# A simple Discord Bot Client
+# A Simple Discord Bot Client
   
 *Created by: Mani*
 
