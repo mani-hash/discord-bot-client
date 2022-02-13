@@ -1,4 +1,6 @@
 # A Simple Discord Bot Client
+
+[NOTE: This project was created for fun and the code is messy]
   
 *Created by: Mani*
 
